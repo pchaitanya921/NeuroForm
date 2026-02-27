@@ -1,0 +1,142 @@
+/* ThemeToggle.module.css */
+
+.toggleContainer {
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 1px 2px rgba(255,255,255,0.1);
+}
+
+.toggleContainer.light {
+    background-color: #38bdf8;
+    border: 1px solid #7dd3fc;
+}
+
+.toggleContainer.dark {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+}
+
+.toggleTrack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Light Mode Sky & Clouds */
+.skyBackground {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.skyBackground.active {
+    opacity: 1;
+}
+
+.cloud1, .cloud2, .cloud3 {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud1 {
+    width: 20px;
+    height: 20px;
+    bottom: -5px;
+    right: 5px;
+}
+.cloud2 {
+    width: 18px;
+    height: 18px;
+    bottom: 2px;
+    right: -2px;
+}
+.cloud3 {
+    width: 30px;
+    height: 15px;
+    bottom: -3px;
+    right: 15px;
+    border-radius: 10px;
+}
+
+/* Dark Mode Night Sky & Stars */
+.nightBackground {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    color: white;
+    font-size: 8px;
+}
+
+.nightBackground.active {
+    opacity: 1;
+}
+
+.star1 { position: absolute; top: 3px; left: 8px; opacity: 0.8; }
+.star2 { position: absolute; bottom: 5px; left: 16px; opacity: 0.6; font-size: 6px; }
+.star3 { position: absolute; top: 12px; left: 24px; opacity: 0.9; }
+.star4 { position: absolute; bottom: 3px; left: 28px; opacity: 0.5; }
+.star5 { position: absolute; top: 6px; left: 34px; opacity: 0.7; }
+
+/* The Toggle Orb (Sun / Moon) */
+.toggleOrb {
+    position: absolute;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.orbLight {
+    left: 4px;
+    background: #FFD21A; /* Sun Yellow */
+    border: 1px solid #EAB308;
+    box-shadow: 0 0 10px rgba(253, 224, 71, 0.5);
+}
+
+.orbDark {
+    left: calc(100% - 28px);
+    background: #94A3B8; /* Moon Grey */
+    border: 1px solid #64748B;
+    box-shadow: inset -3px -2px 0px 0px rgba(0,0,0,0.1);
+}
+
+/* Moon Craters */
+.crater1, .crater2, .crater3 {
+    position: absolute;
+    background: rgba(0,0,0,0.15);
+    border-radius: 50%;
+}
+
+.crater1 {
+    width: 6px;
+    height: 6px;
+    top: 5px;
+    right: 5px;
+}
+.crater2 {
+    width: 4px;
+    height: 4px;
+    bottom: 4px;
+    left: 4px;
+}
+.crater3 {
+    width: 3px;
+    height: 3px;
+    top: 10px;
+    left: 8px;
+}
